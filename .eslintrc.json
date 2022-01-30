@@ -1,3 +1,4 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next"  // Modified to allow third party script (FontAwesome)
+  // "extends": "next/core-web-vitals"
 }

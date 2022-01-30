@@ -1,0 +1,12 @@
+{
+    "id": "thonk-bot",
+    "name": "ThonkBot",
+    "hidden_github": false,
+    "hidden_issues": false,
+    "hidden_deployments": true,
+    "hidden_wiki": true,
+    "github_url": "https://github.com/TechnoShip123/thonk-bot",
+    "issue_url": "https://github.com/TechnoShip123/thonk-bot/issues?q=is%3Aissue",
+    "deployments_url": "https://github.com/TechnoShip123/thonk-bot/deployments",
+    "wiki_url": "https://github.com/TechnoShip123/thonk-bot/wiki"
+}
