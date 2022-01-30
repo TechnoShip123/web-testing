@@ -89,7 +89,7 @@ export async function getStaticProps({ params }) {
  * @see {@link https://nextjs.org/docs/basic-features/data-fetching/get-static-paths}
  */
 export async function getStaticPaths() {
-    const req = await fetch('http://localhost:3000/projects.json');
+    const req = await fetch('https://raw.githubusercontent.com/TechnoShip123/web-testing/dev/public/projects.json');
     const data = await req.json();  // Get the projects we specified
 
     // Map data to an array, containing every route for the dynamic path
