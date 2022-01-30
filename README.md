@@ -1,5 +1,7 @@
 # web-testing
 
+[![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/TechnoShip123/web-testing/master?logo=codefactor&style=for-the-badge)](https://www.codefactor.io/repository/github/technoship123/web-testing)
+
 ## About
 
 A repository created for testing all kinds of fascinating web technologies and frameworks, in order to better understand them, and to experiment with [git](https://git-scm.com/). The goal is to gain more experience so I can also implement what I learn in other projects.
