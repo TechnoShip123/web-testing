@@ -48,7 +48,7 @@ export default function Project({ project }) {
                     </a>
 
                     {/* Deployments List */}
-                    <a href={project.deployment_url} className={styles.card} hidden={project.hidden_deployments}>
+                    <a href={project.deployments_url} className={styles.card} hidden={project.hidden_deployments}>
                         <h2><FontAwesomeIcon icon={faRocket} /> Deployments &rarr;</h2>
                         <p>View a timeline of deployments, if applicable.</p>
                     </a>

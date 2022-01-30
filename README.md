@@ -1,6 +1,6 @@
 # web-testing
 
-![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/TechnoShip123/web-testing/master?logo=codefactor&style=for-the-badge)
+[![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/TechnoShip123/web-testing/master?logo=codefactor&style=for-the-badge)](https://www.codefactor.io/repository/github/technoship123/web-testing)
 
 ## About
 
