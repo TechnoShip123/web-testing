@@ -76,7 +76,7 @@ export default function Project({ project }) {
  * @see {@link https://nextjs.org/docs/basic-features/data-fetching/get-static-props}
  */
 export async function getStaticProps({ params }) {
-    const req = await fetch(`http://localhost:3000/${params.id}.json`);
+    const req = await fetch(`https://raw.githubusercontent.com/TechnoShip123/web-testing/dev/public/${params.id}.json`);
     const data = await req.json();  // Convert to JSON
 
     return {
