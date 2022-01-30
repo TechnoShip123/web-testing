@@ -71,44 +71,35 @@ export default function Project({ project }) {
     </html>)
 }
 
-export async function getServerSideProps({ params }) {
+/** Next.js will use the props returned by this function 
+ * to pre-render the page at build time (Static Site Generation). 
+ * @see {@link https://nextjs.org/docs/basic-features/data-fetching/get-static-props}
+ */
+export async function getStaticProps({ params }) {
     const req = await fetch(`http://localhost:3000/${params.id}.json`);
-    const data = await req.json();
+    const data = await req.json();  // Convert to JSON
 
     return {
-        props: { project: data },
+        props: { project: data }
     }
 }
 
-// /** Next.js will use the props returned by this function 
-//  * to pre-render the page at build time (Static Site Generation). 
-//  * @see {@link https://nextjs.org/docs/basic-features/data-fetching/get-static-props}
-//  */
-// export async function getStaticProps({ params }) {
-//     const req = await fetch(`http://localhost:3000/${params.id}.json`);
-//     const data = await req.json();  // Convert to JSON
+/** Next.js will use the paths returned by this function 
+ * to statically pre-render the specified dynamic pages.
+ * @see {@link https://nextjs.org/docs/basic-features/data-fetching/get-static-paths}
+ */
+export async function getStaticPaths() {
+    const req = await fetch('http://localhost:3000/projects.json');
+    const data = await req.json();  // Get the projects we specified
 
-//     return {
-//         props: { project: data }
-//     }
-// }
+    // Map data to an array, containing every route for the dynamic path
+    const paths = data.map(project => {
+        return { params: {id: project} }
+    });
 
-// /** Next.js will use the paths returned by this function 
-//  * to statically pre-render the specified dynamic pages.
-//  * @see {@link https://nextjs.org/docs/basic-features/data-fetching/get-static-paths}
-//  */
-// export async function getStaticPaths() {
-//     const req = await fetch('http://localhost:3000/projects.json');
-//     const data = await req.json();  // Get the projects we specified
-
-//     // Map data to an array, containing every route for the dynamic path
-//     const paths = data.map(project => {
-//         return { params: {id: project} }
-//     });
-
-//     // Return the paths, along with extra options like fallback behavior.
-//     return {
-//         paths,
-//         fallback: false
-//     };
-// }
+    // Return the paths, along with extra options like fallback behavior.
+    return {
+        paths,
+        fallback: false
+    };
+}
