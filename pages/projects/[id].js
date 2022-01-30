@@ -4,6 +4,7 @@
 import { useRouter } from "next/router";            // Import useRouter hook for dynamic routing.
 import Head from 'next/head';                       // Import Head for metadata component
 import styles from '../../styles/Home.module.css';  // Import the CSS styles
+import Script from "next/script";                   // Import Script for better loading
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';  // Import FontAwesome icons
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faExclamationCircle, faRocket, faBookOpen } from '@fortawesome/free-solid-svg-icons';
@@ -21,9 +22,9 @@ export default function Project({ project }) {
                 <meta name="description"
                     content={`Homepage for the ${project.name} project, created by @TechnoShip123 on GitHub.`} 
                 />
-                <script src="https://kit.fontawesome.com/597ef5bbc0.js" crossOrigin="anonymous"></script>
             </Head>
-
+            <Script async src="https://kit.fontawesome.com/597ef5bbc0.js" crossOrigin="anonymous"></Script>
+            
             <main className={styles.main}>
                 <h1 className={styles.title}>
                     Welcome to <a className={styles.nowraplink} href={project.github_url}>{project.name}</a>.
