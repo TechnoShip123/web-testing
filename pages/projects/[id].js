@@ -27,7 +27,7 @@ export default function Project({ project }) {
             
             <main className={styles.main}>
                 <h1 className={styles.title}>
-                    Welcome to <a className={styles.nowraplink} href={project.github_url}>{project.name}</a>.
+                    <a className={styles.nowraplink} href={project.github_url}>{project.name}</a>
                 </h1>
 
                 <p className={styles.description}>
